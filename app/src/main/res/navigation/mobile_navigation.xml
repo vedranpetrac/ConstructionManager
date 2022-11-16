@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_constructions">
+
+
+
+    <fragment
+        android:id="@+id/navigation_constructions"
+        android:name="hr.petrach.constructionmanager.ui.constructions.ConstructionsFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_constructions" >
+        <action
+            android:id="@+id/action_navigation_constructions_to_navigation_constructions_edit"
+            app:destination="@id/navigation_constructions_edit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workers"
+        android:name="hr.petrach.constructionmanager.ui.workers.WorkersFragment"
+        android:label="Contractors"
+        tools:layout="@layout/fragment_workers" >
+        <action
+            android:id="@+id/action_navigation_workers_to_navigation_workers_edit"
+            app:destination="@id/navigation_workers_edit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workers_edit"
+        android:name="hr.petrach.constructionmanager.ui.workers.EditWorkerFragment"
+        android:label="Edit Contractor"
+        tools:layout="@layout/fragment_worker_edit" >
+        <action
+            android:id="@+id/action_navigation_workers_edit_to_navigation_workers"
+            app:destination="@id/navigation_workers" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_constructions_edit"
+        android:name="hr.petrach.constructionmanager.ui.constructions.EditConstructionFragment"
+        android:label="Edit Construction"
+        tools:layout="@layout/fragment_construction_edit" >
+
+        <action
+            android:id="@+id/action_navigation_constructions_edit_to_navigation_constructions"
+            app:destination="@id/navigation_constructions" />
+    </fragment>
+</navigation>

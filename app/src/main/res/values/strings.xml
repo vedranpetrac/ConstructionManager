@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConstructionManager</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Constructions</string>
+    <string name="title_notifications">Workers</string>
+    <string name="please_insert_value">This filed is required</string>
+    <string name="contractors">Contractors</string>
+</resources>
